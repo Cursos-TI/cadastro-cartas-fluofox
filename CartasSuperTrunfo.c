@@ -118,7 +118,7 @@ int main() {
   printf("Área: (%d)\n", area1 > area2);
   printf("PIB: (%d)\n", pib1 > pib2);
   printf("Pontos turísticos: (%d)\n", touristSpotNumber1 > touristSpotNumber2);
-  printf("Densidade populacional: (%d)\n", populationDensity1 > populationDensity2);
+  printf("Densidade populacional: (%d)\n", populationDensity1 < populationDensity2);
   printf("PIB per Capita: (%d)\n", pibPerCapita1 > pibPerCapita2);
   printf("Super poder: (%d)\n", superPower1 > superPower2);
 
