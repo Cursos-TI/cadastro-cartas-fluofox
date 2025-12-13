@@ -116,8 +116,8 @@ int main() {
   
   printf("Atributo: População\n");
 
-  printf("Carta 1 - %s (%s): %d hab./km²\n", name1, state1, population1);
-  printf("Carta 2 - %s (%s): %d hab./km²\n", name2, state2, population2);
+  printf("Carta 1 - %s (%s): %d hab.\n", name1, state1, population1);
+  printf("Carta 2 - %s (%s): %d hab.\n", name2, state2, population2);
 
   if (population1 > population2) {
     printf("Resultado: Carta 1 - (%s) venceu!\n", name1);
