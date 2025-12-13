@@ -3,11 +3,11 @@
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
-// Nível: Mestre
+// Nível: Novato 2
 
 int main() {
-  char state1[2], state2[2];                        // Estado: uma letra de A a H.
-  char id1[4], id2[4];                              // Código da carta: a letra do Estado seguida de um número de 01 a 04.
+  char state1[3], state2[3];                        // Estado: abreviação do Estado em 2 letras. Exemplo: RJ. 
+  char id1[5], id2[5];                              // Código da carta: a variável Estado seguida de um número de 01 a 04.
   char name1[30], name2[30];                        // Nome da cidade.
   unsigned long int population1, population2;       // População: número de habitantes na cidade.
   float area1, area2;                               // Área da cidade em km².
@@ -20,10 +20,10 @@ int main() {
   // Entrada de dados da Carta 1
   printf("Carta 1\n");
 
-  printf("Digite o estado (A - H):\n");
+  printf("Digite o estado (ex: RJ):\n");
   scanf("%s", state1);
   
-  printf("Digite o código da carta (ex: A01):\n");
+  printf("Digite o código da carta (ex: RJ01):\n");
   scanf("%s", id1);
   
   printf("Digite o nome da cidade (ex: Rio de Janeiro):\n");
@@ -48,10 +48,10 @@ int main() {
   // Entrada de dados da Carta 2
   printf("Carta 2\n");
 
-  printf("Digite o estado (A - H):\n");
+  printf("Digite o estado (SP):\n");
   scanf("%s", state2);
   
-  printf("Digite o código da carta (ex: B02):\n");
+  printf("Digite o código da carta (ex: SP02):\n");
   scanf("%s", id2);
   
   printf("Digite o nome da cidade (ex: São Paulo):\n");
@@ -112,15 +112,18 @@ int main() {
 
   // Exibição da comparação das cartas
   printf("\n---\n\n");
-  printf("Comparação de cartas - (1): Carta 1 vence / (0): Carta 2 vence\n");
+  printf("Comparação de cartas\n");
   
-  printf("População: (%d)\n", population1 > population2);
-  printf("Área: (%d)\n", area1 > area2);
-  printf("PIB: (%d)\n", pib1 > pib2);
-  printf("Pontos turísticos: (%d)\n", touristSpotNumber1 > touristSpotNumber2);
-  printf("Densidade populacional: (%d)\n", populationDensity1 < populationDensity2);
-  printf("PIB per Capita: (%d)\n", pibPerCapita1 > pibPerCapita2);
-  printf("Super poder: (%d)\n", superPower1 > superPower2);
+  printf("Atributo: População\n");
+
+  printf("Carta 1 - %s (%s): %d hab./km²\n", name1, state1, population1);
+  printf("Carta 2 - %s (%s): %d hab./km²\n", name2, state2, population2);
+
+  if (population1 > population2) {
+    printf("Resultado: Carta 1 - (%s) venceu!\n", name1);
+  } else {
+    printf("Resultado: Carta 2 - (%s) venceu!\n", name2);
+  }
 
   return 0;
 } 
