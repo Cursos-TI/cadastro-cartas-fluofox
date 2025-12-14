@@ -89,7 +89,7 @@ int main() {
   printf("Estado: %s\n", state1);
   printf("Código: %s\n", id1);
   printf("Nome da cidade: %s\n", name1);
-  printf("População: %d\n", population1);
+  printf("População: %lu\n", population1);
   printf("Área: %.2f km²\n", area1);
   printf("PIB: %.2f bilhões de reais\n", pib1);
   printf("Número de pontos turísticos: %d\n", touristSpotNumber1);
@@ -103,7 +103,7 @@ int main() {
   printf("Estado: %s\n", state2);
   printf("Código: %s\n", id2);
   printf("Nome da cidade: %s\n", name2);
-  printf("População: %d\n", population2);
+  printf("População: %lu\n", population2);
   printf("Área: %.2f km²\n", area2);
   printf("PIB: %.2f bilhões de reais\n", pib2);
   printf("Número de pontos turísticos: %d\n", touristSpotNumber2);
@@ -130,8 +130,8 @@ int main() {
   switch (option) {
     case 1:
       printf("Atributo: População\n");
-      printf("Carta 1 - %s (%s): %d hab.\n", name1, state1, population1);
-      printf("Carta 2 - %s (%s): %d hab.\n", name2, state2, population2);
+      printf("Carta 1 - %s (%s): %lu hab.\n", name1, state1, population1);
+      printf("Carta 2 - %s (%s): %lu hab.\n", name2, state2, population2);
       if (population1 > population2) {
         printf("Carta 1 venceu!\n");
       } else if (population1 < population2) {
